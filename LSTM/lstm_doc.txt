@@ -1,0 +1,20 @@
+Adadelta:  Another adaptive learning rate method. Less dependent on the choice of initial learning rate than RMSprop.
+
+Pros: Good for noisy or rapidly changing data.
+Cons: Slightly slower convergence compared to Adam in some cases.
+
+model.compile(optimizer='adam', loss='mean_squared_error')
+keras.optimizers
+
+
+
+When Alternatives Might Be Preferred
+
+Strong Stationarity: If your time series is very strictly stationary (consistent mean and variance), simpler optimizers like SGD or RMSprop might be sufficient and potentially slightly faster.
+Proven Success of Adam: Adam is often a very successful optimizer for LSTMs. If Adam works well for your application, there may be less reason to switch.
+Memory Constraints: Adadelta stores past gradients and updates, which can increase memory usage compared to simpler optimizers.
+
+
+
+
+
